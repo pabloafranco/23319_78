@@ -47,7 +47,7 @@ class Cuenta():
         try:
             self.__cantidad -= cantidad
         except:
-            print (f'Valor incorrecto {ValueError}')
+            print (f'Valor incorrecto {cantidad}')
 """
 nueva_cuenta=Cuenta('Pablo')
 nueva_cuenta.ingresar(20)
@@ -56,3 +56,5 @@ nueva_cuenta.ingresar("adsasdf")
 nueva_cuenta.retirar(50)
 nueva_cuenta.mostrar()
 """
+nueva_cuenta=Cuenta('Pablo')
+nueva_cuenta.retirar("34234")

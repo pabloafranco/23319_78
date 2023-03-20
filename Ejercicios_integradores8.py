@@ -28,8 +28,11 @@ class CuentaJoven(Cuenta):
     #SETTER
     @bonificacion.setter
     def bonificacion(self,nueva_bonificacion):
-        self.__bonificacion = nueva_bonificacion
-
+        try:
+            self.__bonificacion = int(nueva_bonificacion)
+        except:
+            print (f'Valor incorrecto {nueva_bonificacion}')
+        
     @property
     def edad(self):
         return self.__edad
@@ -37,7 +40,10 @@ class CuentaJoven(Cuenta):
     #SETTER
     @edad.setter
     def edad(self,nueva_edad):
-        self.__edad = nueva_edad
+        try:
+            self.__edad = int(nueva_edad)
+        except:
+            print (f'Valor incorrecto {nueva_edad}')
 
     def es_titular_valido(self):
         return self.__edad >= 18 and self.__edad <= 25
